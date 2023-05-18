@@ -11,12 +11,12 @@ quebrada e, se forem iguais, o programa é finalizado.
 Se o tamanho da senha original for sabido, é possível acelerar o processo
 conforme o código:
 
-`
+```
 for word in dictionary
 	if len(word) == size
 		if(word.hashed == password)
 			return
-`
+```
 
 Nesse caso, realizar a operação hash é mais pesado do que comparar o tamanho
 da palavra, então vale a pena testar o tamanho antes de codificar cada palavra.
