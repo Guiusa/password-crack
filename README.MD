@@ -41,3 +41,31 @@ dicionário
 **password** especifica o caminho do arquivo que contém a senha hasheada.
 Por padrão, password procura pelo arquivo "pass" no diretório corrente
 
+# /etc/shadow
+O arquivo /etc/shadow no linux armazena as senhas hasheadas para cada usuário
+do sistema.
+ 
+O padrão da criptografia das entradas no arquivo /etc/shadow é o seguinte:
+
+`<USER>:$<COD_FUNCAO_HASH>$<SALT>$<HASH>`
+
+Salt é uma string aleatorizada que é somada à senha na hora de criar o hash. Com
+esse método evita-se que uma senha comum, como 12345, tenha um hash igual e
+não seja possível criar um dicionário de equivalência senha-hash.
+
+## ENTRADAS DADAS:
+Pimpolho:
+$y$j9T$nFwHNF0c3SCbH6ESyzSKw.
+$ph1Q6UMJnIyAU6O7ZLYH14H5C4.V1SJjcrjLqVQuG00:19472:0:99999:7:::
+
+testeadm:
+$y$j9T$5LImmws2fco9AeRmLSB2j0$fYPmdqu1Q/
+FDiwPJgkCIW9wX76w12SNEiYAodUzafo5:19472:0:99999:7:::
+
+   User  |              salt             |                  hash                      
+-------- | ----------------------------- | -------------------------------------------
+Pimpolho | $y$j9T$nFwHNF0c3SCbH6ESyzSKw  | ph1Q6UMJnIyAU6O7ZLYH14H5C4.V1SJjcrjLqVQuG00
+testeadm | $y$j9T$5LImmws2fco9AeRmLSB2j0 | fYPmdqu1QFDiwPJgkCIW9wX76w12SNEiYAodUzafo5
+
+
+
