@@ -11,7 +11,10 @@ def yescrypt(passwd, salt):
 	return hash
 
 def bruteForce(passwd, salt):
-	chars = [chr(i) for i in range(32, 126)]
+	numbrs = range(48, 58)
+	lettrs = range(97,123)
+	arr = [*numbrs, *lettrs]
+	chars = [chr(i) for i in arr]
 	size = 1
 
 	while(True):
@@ -22,7 +25,8 @@ def bruteForce(passwd, salt):
 					print("A senha é: "+password)
 					return 1
 		size+=1
-		if (size == 3):
+		#LOL, LMAO, LMFAO
+		if (size == 15):
 			print("nao achei")
 			return 0
 def main():
