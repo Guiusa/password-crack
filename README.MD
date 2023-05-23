@@ -116,3 +116,8 @@ combinatórios possíveis fez com que o sistema operacional matasse o processo
 Com esses teste, é seguro dizer que uma senha com letras maiúsculas e minúsculas
 , dígitos e símbolos com uma quantia razoável de caracteres (7 ou mais), é 
 praticamente impossível de ser quebrada com um algoritmo bruteforce
+
+# ARQUIVOS
+Todos os arquivos desse trabalho estão disponíveis em:
+
+`github.com/Guiusa/password-crack`

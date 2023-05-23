@@ -1,6 +1,5 @@
 import argparse
 import crypt
-#import os
 import itertools
 
 def yescrypt(passwd, salt):
